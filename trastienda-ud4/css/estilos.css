@@ -1,0 +1,70 @@
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background-color: #f5f2ed;
+    margin: 0;
+}
+
+header {
+    background-color: #49352b;
+    color: white;
+    padding: 20px;
+}
+
+header a {
+    color: white;
+}
+
+
+h1 {
+    color: #49352b;
+}
+
+h2 {
+    color: #49352b;
+}
+
+h3 {
+    color: #333333;
+}
+
+
+main {
+    padding: 20px;
+}
+
+
+
+article {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+a {
+    color: #49352b;
+}
+
+.lista-carrito {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+nav button {
+    background-color: #49352b;
+    color: white;
+}
+
+
+nav a {
+    text-decoration: none;
+}
+
+nav a[aria-current="page"] {
+    color: #b56b35;
+    font-weight: bold;
+    text-decoration: underline;
+}
