@@ -66,5 +66,40 @@ nav a {
 nav a[aria-current="page"] {
     color: #b56b35;
     font-weight: bold;
-    text-decoration: underline;
+}
+
+
+nav a[aria-current="page"] {
+    color: #b56b35;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #b56b35;
+}
+
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+h2 + .card {
+    border-top: 3px solid #b56b35;
+}
+
+.badge {
+    background-color: #b56b35;
+    color: white;
+    padding: 5px;
+}
+
+.badge:empty {
+    display: none;
+}
+article:has(.badge:not(:empty)) {
+    border: 2px solid #b56b35;
+}
+button[aria-label] {
+    cursor: pointer;
 }
