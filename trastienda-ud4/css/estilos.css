@@ -1,6 +1,5 @@
 
 :root {
-    /* Escala primaria */
     --color-primary-50: #f7f0eb;
     --color-primary-100: #eadbd0;
     --color-primary-200: #d6bba8;
@@ -12,7 +11,6 @@
     --color-primary-800: #38281f;
     --color-primary-900: #251a14;
 
-    /* Escala neutra */
     --color-neutral-50: #faf9f7;
     --color-neutral-100: #f5f2ed;
     --color-neutral-200: #e8e3dc;
@@ -24,7 +22,6 @@
     --color-neutral-800: #38332e;
     --color-neutral-900: #211e1b;
 
-    /* Variables semanticas */
     --bg-page: var(--color-neutral-100);
     --bg-surface: #ffffff;
     --text-main: var(--color-neutral-800);
@@ -34,14 +31,28 @@
     --brand-hover: var(--color-primary-900);
 
     --color-accent-oklch: oklch(0.68 0.13 48);
+
+    --font-body: 'Inter', system-ui, sans-serif;
+    --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    line-height: 1.5;
     color: var(--text-main);
     background-color: var(--bg-page);
     margin: 0;
 }
+
 header {
     background-color: var(--text-main);
     color: var(--bg-surface);
@@ -51,40 +62,49 @@ header {
         color: var(--bg-surface);
     }
 }
+
 h1 {
-    color: var(--color-neutral-50);
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--brand);
 }
 
 h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
     color: var(--brand);
 }
 
 h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
     color: var(--text-main);
 }
+
 main {
     padding: 20px;
+    min-height: 100dvh;
 }
+
 article {
     background-color: var(--bg-surface);
     padding: 15px;
     margin-bottom: 15px;
 }
 
-
 a {
     color: var(--brand);
 }
 
-
 .lista-carrito {
     list-style: none;
     padding: 0;
-}
-
-nav button {
-    background-color: var(--brand);
-    color: white;
 }
 
 nav {
@@ -100,6 +120,7 @@ nav {
     a {
         color: var(--text-muted);
         text-decoration: none;
+        font-size: var(--text-sm);
 
         &[aria-current="page"] {
             color: var(--brand);
@@ -142,6 +163,7 @@ article.card {
 
     p:first-of-type {
         color: var(--text-muted);
+        font-size: var(--text-sm);
     }
 
     p:nth-of-type(2) {
@@ -166,6 +188,7 @@ article.card {
     background-color: var(--color-accent-oklch);
     color: white;
     padding: 5px;
+    font-size: var(--text-xs);
 }
 
 .badge:empty {
@@ -178,4 +201,8 @@ article:has(.badge:not(:empty)) {
 
 button[aria-label] {
     cursor: pointer;
+}
+
+main p {
+    max-width: 65ch;
 }
